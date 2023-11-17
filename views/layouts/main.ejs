@@ -17,25 +17,29 @@
 </head>
 <body>
 
-  <div class="container-lg px-md-5 bg-white shadow-sm">
+  <div class="container-lg px-md-5 bg-white shadow">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-      </div>
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img src="/img/logo.svg" width="229" height="68" alt="My-Cook logo">
+      </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2">Features</a></li>
-        <li><a href="#" class="nav-link px-2">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2">About</a></li>
+        <li><a href="/" class="nav-link px-2 link-secondary">Início</a></li>
+        <li><a href="/about" class="nav-link px-2 link-secondary">Sobre</a></li>
+        <li><a href="/submit-recipe" class="nav-link px-2 link-secondary">Enviar</a></li>
+        <li><a href="/contact" class="nav-link px-2 link-secondary">Contato</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
+        <form method="POST" action="/search">
+          <input 
+            type="search" 
+            name="searchTerm" 
+            class="form-control" 
+            placeholder="Procurar..."
+            aria-label="Procurar"
+          >
+        </form>
       </div>
     </header>
 
@@ -43,6 +47,9 @@
       <%- body -%>
     </main>
 
+    <footer class="py-5">
+      <p>Feito por Luiiz</p>
+    </footer>
   </div>
   
   
